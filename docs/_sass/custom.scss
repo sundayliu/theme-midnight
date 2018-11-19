@@ -1,0 +1,172 @@
+footer.site-footer {
+  p{
+    text-align:center;
+    margin:0px;
+  }
+  hr {
+      margin: 5px 0px;
+      height:2px;
+      background:#666666;
+    }
+}
+
+/**
+ * Site header
+ */
+.site-header {
+  hr {
+      margin: 5px 0px;
+      height:2px;
+      background:#666666;
+      display:block;
+      clear:both;
+    }
+  min-height: $spacing-unit * 1.865;
+  h1 {
+      font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      font-size: 40px;
+      text-align: center;
+      line-height: 36px;
+    }
+
+    p {
+      color: #d7cfbe;
+      font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      font-size: 18px;
+      text-align: center;
+    }
+
+  // Positioning context for the mobile navigation icon
+  // position: relative;
+}
+
+
+.site-title {
+  padding-top:18px;
+  padding-bottom:2px;
+  @include relative-font-size(1.625);
+  font-weight: 300;
+  line-height: $base-line-height;
+  float: left;
+  border: 1px solid $grey-color-light;
+  @include media-query($on-palm) {
+    padding-right: 45px;
+  }
+
+  &,
+  &:visited {
+    color: $grey-color-dark;
+  }
+}
+
+
+
+
+.site-nav {
+  float:right;
+  border: 1px solid $grey-color-light;
+  border-radius: 5px;
+  text-align: right;
+  line-height: $base-line-height * $base-font-size * 2.25;
+
+  .nav-trigger {
+      display: none;
+  }
+  
+  a:hover {
+    margin:0;
+    padding:0;
+	background-color: #333;
+
+}
+
+  .menu-icon {
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    text-align: center;
+
+    > svg path {
+      fill: $grey-color-dark;
+    }
+  }
+  
+
+  
+  label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  input ~ .trigger {
+    clear: both;
+    display: none;
+  }
+
+  input:checked ~ .trigger {
+    display: block;
+    padding-bottom: 5px;
+    position:absolute;
+    right: 20px;
+	top: 40px;
+    border: 1px solid $grey-color-light;
+  }
+
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+    display: block;
+    // padding: 5px 10px;
+
+    // Gaps between nav items, but not on the last one
+    //&:not(:last-child) {
+    //  margin-right: 0;
+    //}
+    margin-left: 20px;
+  }
+
+  
+  @media screen and (min-width: $on-medium) {
+    margin-top:20px;
+    // padding-top:20px;
+    position: static;
+    float: right;
+    border: 1px solid $grey-color-light;
+    background-color: inherit;
+
+    label[for="nav-trigger"] {
+      display: none;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    input ~ .trigger {
+      display: none;
+    }
+
+    input ~ .trigger {
+      display: block;
+    }
+
+    .page-link {
+      display: inline;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      margin-left: auto;
+    }
+  }
+  
+}
+
